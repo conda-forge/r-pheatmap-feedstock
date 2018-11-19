@@ -14,9 +14,9 @@ source:
   sha256: c7fde6bf25decec1945af18fbab2edcd6a129a3b31817bc50779fcc561d1fdcb
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 1
-  skip: true  # [win32]
+  number: 1001
   rpaths:
     - lib/R/lib/
     - lib/
@@ -45,8 +45,7 @@ about:
   license: GPL-2
   summary: Implementation of heatmaps that offers more control over dimensions and appearance.
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-2'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
