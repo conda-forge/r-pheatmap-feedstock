@@ -1,4 +1,4 @@
-{% set version = '1.0.10' %}
+{% set version = '1.0.12' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: pheatmap_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/pheatmap_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pheatmap/pheatmap_{{ version }}.tar.gz
-  sha256: c7fde6bf25decec1945af18fbab2edcd6a129a3b31817bc50779fcc561d1fdcb
+  sha256: 579d96ee0417203b85417780eca921969cda3acc210c859bf9dfeff11539b0c1
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1001
+  number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -49,10 +48,23 @@ about:
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+    - conda-forge/r
     - roryk
+
+# Package: pheatmap
+# Type: Package
+# Title: Pretty Heatmaps
+# Version: 1.0.12
+# Date: 2018-12-26
+# Author: Raivo Kolde
+# Maintainer: Raivo Kolde <rkolde@gmail.com>
+# Depends: R (>= 2.0)
+# Description: Implementation of heatmaps that offers more control over dimensions and appearance.
+# Imports: grid, RColorBrewer, scales, gtable, stats, grDevices, graphics
+# License: GPL-2
+# LazyLoad: yes
+# RoxygenNote: 6.0.1
+# NeedsCompilation: no
+# Packaged: 2019-01-02 15:37:50 UTC; kolde
+# Repository: CRAN
+# Date/Publication: 2019-01-04 13:50:12 UTC
