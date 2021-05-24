@@ -41,10 +41,11 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=pheatmap
-  license: GPL-2
+  license: GPL-2.0-only
   summary: Implementation of heatmaps that offers more control over dimensions and appearance.
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
