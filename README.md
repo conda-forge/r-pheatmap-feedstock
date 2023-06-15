@@ -1,11 +1,11 @@
-About r-pheatmap
-================
+About r-pheatmap-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-pheatmap-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=pheatmap
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-pheatmap-feedstock/blob/main/LICENSE.txt)
 
 Summary: Implementation of heatmaps that offers more control over dimensions and appearance.
 
