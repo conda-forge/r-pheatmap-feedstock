@@ -1,4 +1,4 @@
-{% set version = '1.0.12' %}
+{% set version = "1.0.13" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pheatmap_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pheatmap/pheatmap_{{ version }}.tar.gz
-  sha256: 579d96ee0417203b85417780eca921969cda3acc210c859bf9dfeff11539b0c1
+  sha256: 4ac34d4c5f787624f45cc98a97b8c28295c57eb635d1523554252c5a583142f7
 
 build:
-  number: 5
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
